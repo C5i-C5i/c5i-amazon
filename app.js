@@ -20,8 +20,8 @@ const engagements = [
   {title:'AWS Media Lifestyle Study', capability:'End-to-End Primary Research', team:'AWS Media', methodology:'Media Tracking', geography:'9 markets', status:'Earlier', tags:['Media Tracking','Ad-hoc'], image:"linear-gradient(135deg,rgba(3,59,89,.18),rgba(34,197,94,.10)), url('assets/aws-media-lifestyle.svg') center/cover no-repeat", desc:'Global media behavior tracking study across 9 markets to understand media better to better connect with customers.', stats:[['9','Markets'],['$77k','Value']]}
 ];
 
-const teams = ['XCM','Amazon Fuse','WW Search','Exports','Pricing','HBS','AWS Advertising','Leo / Kuiper','CXBT','Others'];
-const teamIcons = ['📊','👥','🔎','🌐','🏷️','📦','📣','🛰️','👥','•••'];
+const teams = ['XCM','Amazon Fuse','WW Search','Exports','Pricing','HBS','AWS Advertising','Leo / Kuiper','CXBT'];
+const teamIcons = ['📊','👥','🔎','🌐','🏷️','📦','📣','🛰️','👥'];
 const impactMetrics = [
   ['🌐','24+','Marketplace (Continuous + Pulse)'], ['👥','350+','Dashboard users'], ['📦','~100K','Products evaluated (PLM)'], ['👥','~300K','Respondents (DSDM)'], ['📦','1,500','Products evaluated (DSDM)'], ['📍','9','Markets (AWS Media Study)']
 ];
@@ -33,6 +33,103 @@ const programs = [
   {title:'WW Search Satisfaction study', points:['3 waves in US and EU5 marketplaces.','Assess customer perceptions and satisfaction with website search systems and competitors.','Expanded to deep-dive and understand how AI chatbots play a key role in the shopping journey.']},
   {title:'Amazon pricing research team', points:['US (5 waves) and 4 waves in EU5: UK, DE, FR, IT and ES.','Understand perception of pricing across Softlines, Hardlines and Consumables categories.','Van Westerndorp questions were also done to arrive at optimal prices for product.']}
 ];
+// Detail content for the "Our Capabilities" Explore pop-up only — does NOT affect the Ongoing engagements section above.
+const capabilityDetails = {
+  'Research, Analytics & Reporting': [
+    {title:'XCM RBT Continuous & Pulse tracker', points:[
+      'Continuous brand tracking: 11 established markets with monthly data collection',
+      'Pulse brand tracking: 13 emerging markets with quarterly data collection',
+      'Questionnaire design & Data collection by Kantar',
+      'Data analysis & detailed reports with insights every quarter by C5i'
+    ], scale:[
+      '4 quarterly detailed reports for both programs',
+      'Monthly scorecards',
+      'Regular ad-hoc deep dives with analysis & insights'
+    ]}
+  ],
+  'Data Engineering & BI Dashboarding': [
+    {title:'XCM RBT Tracker Dashboarding', points:[
+      'QuickSight dashboard on C5i’s environment with AWS SSO for both Continuous and Pulse tracker',
+      'Continuous brand tracking: Refresh every month',
+      'Pulse brand tracking: Refresh every quarter',
+      'Views: 25 segments, TTM, Monthly, Quarterly time periods, multiple level of significant testing'
+    ], scale:[
+      'Always-on KPI access for 350+ users',
+      '4-5 views with various cuts for each market'
+    ]}
+  ],
+  'End-to-End Primary Research': [
+    {title:'Amazon Fuse', points:[
+      'End-to-end primary research, except data collection for multiple Activation, Engagement, Suspension and Willingness to recommend surveys with customers & Sales partners',
+      'End to end UX research studies on signup experience on Amazon’s UX testing platforms'
+    ], scale:[
+      '~10-12 surveys in a year',
+      '4-5 UX research studies',
+      'Detailed analysis and reports for any studies undertaken'
+    ]},
+    {title:'Exports (XB) Shopping Experience', points:[
+      'Multi-market primary research survey for 5 markets to evaluate cross-border shopping experience',
+      'Tracking survey in Colombia & Israel to track Amazon’s retail, Prime and Prime Video performance along with cross-border shopping experience'
+    ], scale:[
+      '5 waves in Colombia',
+      '2 waves in Israel',
+      '1 ad-hoc in 5 markets',
+      'Expanding to LATAM',
+      'Detailed analysis and reports for any studies undertaken'
+    ]},
+    {title:'WW Search Satisfaction & Shopping Experience', points:[
+      'Global search-satisfaction tracker across US, EU3 and Japan markets',
+      'Multiple ad-hoc primary research survey on pain points, navigation, discovery and Ads Monetization / Reduced Page Views'
+    ], scale:[
+      '8 quarters of tracking program',
+      'Excel reporting & dashboards',
+      'Thematic analysis using C5i AI accelerators'
+    ]}
+  ],
+  'Advanced Analytics': [
+    {title:'Heavy Bulky Services - Delivery Experience (HBS DEX)', points:[
+      'Three phase module to understand customer expectations delivery experience',
+      'Qualitative exercise to understand delivery experience',
+      'Quantitative exercise to quantify the results from Qualitative',
+      'Conjoint to understand the choice of deliver'
+    ], scale:[
+      '3 detailed reports for each module',
+      'Simulator for conjoint analysis results'
+    ]},
+    {title:'Price Lift Module (PLM) Conjoint Analysis', points:[
+      'End-to-end primary research conjoint survey in US to capture customer’s reactions to price info., features and shipping',
+      '~20,000 respondents',
+      'Evaluating for ~100,000 products across 30 categories',
+      'Detailed analysis done by Amazon'
+    ], scale:[
+      'Re-structured respondent level data in the format required by Amazon given by C5i for analysis'
+    ]},
+    {title:'Demand Sensitivity and Decision Module (DSDM)', points:[
+      'End-to-end primary research conjoint survey in EU5 markets to capture how different attributes impact customer’s shopping behavior (delivery time, product and delivery fee, and delivery location)',
+      '~300,000 respondents evaluating 1500 products',
+      'Detailed analysis done by Amazon'
+    ], scale:[
+      'Re-structured respondent level data in the format required by Amazon given by C5i for analysis'
+    ]}
+  ],
+  'UX Research': [
+    {title:'Amazon Fuse — UX Research track', points:[
+      'End to end UX research studies on signup experience on Amazon’s UX testing platforms'
+    ], scale:[
+      '4-5 UX research studies',
+      'Detailed analysis and reports for any studies undertaken'
+    ]}
+  ],
+  'Market & Competitive Intelligence': [
+    {title:'AWS Media Lifestyle Study', points:[
+      'Global media behavior tracking study across 9 markets to understand media better to better connect with customers',
+      'Data collected through AWS database'
+    ], scale:[
+      '3 annual waves',
+      'Detailed excel dashboard of results'
+    ]}
+  ]
+};
 const earlier = [
   {title:'Heavy Bulky Services - Delivery Experience (HBS DEX)', cost:'$77k', points:['Three phase module to understand customer expectations delivery experience.','Qualitative exercise, quantitative exercise and conjoint to understand choice of delivery.']},
   {title:'WW Pricing - Hardlines, Softlines & Consumables', cost:'$600k', points:['Global price perception tracker across US, EU5 and markets.','Multiple product categories such as clothing, footwear, consumables etc.']},
@@ -51,16 +148,48 @@ const differentiators = [
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const unique = (arr, key) => [...new Set(arr.map(x => x[key]).filter(Boolean))].sort();
-function init(){renderCapabilities();setupFilters();renderEngagements();renderTeams();renderImpact();renderPrograms();renderEarlier();renderDiffs();setupSearch();setupNav();setupCounters();setupReveal();}
+function init(){
+  renderCapabilities();
+  renderTeams();
+  // Impact scorecards removed as requested.
+  if ($('#programsGrid')) renderPrograms();
+  if ($('#earlierGrid')) renderEarlier();
+  if ($('#diffGrid')) renderDiffs();
+  if ($('#openSearch') && $('#searchModal')) setupSearch();
+  setupCapModal();
+  setupNav();
+  setupCounters();
+  setupReveal();
+  setTimeout(()=>$$('.reveal:not(.show)').forEach(el=>el.classList.add('show')), 1500);
+}
 function renderCapabilities(){
-  $('#capabilityGrid').innerHTML = capabilities.map(c=>`<article class="cap-card reveal" style="--glow:${c.glow}"><div class="cap-icon">${c.icon}</div><h3>${c.title}</h3><p>${c.text}</p><a href="#engagements" data-cap="${c.title}">Explore →</a></article>`).join('');
-  $$('#capabilityGrid a').forEach(a=>a.onclick=e=>{e.preventDefault();$('#capabilityFilter').value=a.dataset.cap;renderEngagements();location.hash='engagements';});
+  $('#capabilityGrid').innerHTML = capabilities.map(c=>`<article class="cap-card" style="--glow:${c.glow}" data-capability="${c.title}"><div class="cap-icon">${c.icon}</div><h3>${c.title}</h3><p>${c.text}</p><a href="#" class="cap-explore" data-capability="${c.title}">Explore →</a></article>`).join('');
+}
+function renderCapModal(capTitle){
+  const cap = capabilities.find(c=>c.title===capTitle);
+  const items = capabilityDetails[capTitle] || [];
+  $('#capModalEyebrow').textContent = 'EXPLORE';
+  $('#capModalTitle').textContent = capTitle;
+  $('#capModalText').textContent = cap ? cap.text : '';
+  $('#capModalBody').innerHTML = items.length
+    ? items.map(e=>`<div class="cap-engagement"><h4>${e.title}</h4><ul>${e.points.map(x=>`<li>${x}</li>`).join('')}</ul>${e.scale?`<div class="scale-output"><h5>SCALE / OUTPUT</h5><ul>${e.scale.map(x=>`<li>${x}</li>`).join('')}</ul></div>`:''}</div>`).join('')
+    : `<p class="cap-empty">Detailed engagement breakdowns for this capability are being added soon.</p>`;
+}
+function setupCapModal(){
+  const modal = $('#capModal');
+  if(!modal) return;
+  $$('.cap-explore').forEach(a=>a.addEventListener('click', e=>{
+    e.preventDefault();
+    renderCapModal(a.dataset.capability);
+    modal.classList.add('open');
+  }));
+  $('#closeCapModal').addEventListener('click', ()=>modal.classList.remove('open'));
+  modal.addEventListener('click', e=>{ if(e.target===modal) modal.classList.remove('open'); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') modal.classList.remove('open'); });
 }
 function setupFilters(){
   const caps=unique(engagements,'capability'),teams=unique(engagements,'team'),methods=unique(engagements,'methodology'),geos=unique(engagements,'geography'),statuses=unique(engagements,'status');
   fill('#capabilityFilter',caps,'Capability');fill('#teamFilter',teams,'Amazon Team');fill('#methodologyFilter',methods,'Methodology');fill('#geographyFilter',geos,'Geography');fill('#statusFilter',statuses,'Engagement Status');
-  ['#engagementSearch','#capabilityFilter','#teamFilter','#methodologyFilter','#geographyFilter','#statusFilter'].forEach(id=>$(id).addEventListener('input',renderEngagements));
-  $('#viewAllEngagements').onclick=()=>{['#engagementSearch','#capabilityFilter','#teamFilter','#methodologyFilter','#geographyFilter','#statusFilter'].forEach((id,i)=>$(id).value=i?'All':'');renderEngagements();};
 }
 function fill(id, values, label){$(id).innerHTML = `<option value="All">${label} All</option>` + values.map(v=>`<option>${v}</option>`).join('');}
 function renderEngagements(){
@@ -69,11 +198,11 @@ function renderEngagements(){
   $('#engagementGrid').innerHTML=list.map((e,i)=>`<article class="engagement-card reveal" style="transition-delay:${Math.min(i*.035,.25)}s"><div class="card-image" style="background:${e.image}"></div><div class="card-body"><div class="tags">${e.tags.map((t,j)=>`<span class="tag ${j%3===1?'green':j%3===2?'pink':''}">${t}</span>`).join('')}</div><h3>${e.title}</h3><p>${e.desc}</p><div class="card-stats">${e.stats.map(s=>`<div><strong>${s[0]}</strong><span>${s[1]}</span></div>`).join('')}</div><a class="view-link" href="#programs">View Engagement →</a></div></article>`).join('') || `<div class="program-card"><h3>No engagements found</h3><p>Adjust filters or search another term.</p></div>`;
   setupReveal();
 }
-function renderTeams(){ $('#teamGrid').innerHTML=teams.map((t,i)=>`<a class="team-tile reveal" href="#engagements" data-team="${t}"><span>${teamIcons[i]}</span>${t}</a>`).join(''); $$('#teamGrid a').forEach(a=>a.onclick=e=>{e.preventDefault();$('#teamFilter').value=a.dataset.team;renderEngagements();location.hash='engagements';}); }
+function renderTeams(){ $('#teamGrid').innerHTML=teams.map((t,i)=>`<a class="team-tile" href="#teams" data-team="${t}"><span>${teamIcons[i]}</span>${t}</a>`).join(''); }
 function renderImpact(){ $('#impactMetrics').innerHTML=impactMetrics.map(m=>`<article class="impact-card reveal"><div class="metric-icon">${m[0]}</div><div><strong>${m[1]}</strong><span>${m[2]}</span></div></article>`).join(''); }
 function renderPrograms(){ $('#programsGrid').innerHTML=programs.map(p=>`<article class="program-card reveal"><h3>${p.title}</h3><ul>${p.points.map(x=>`<li>${x}</li>`).join('')}</ul></article>`).join(''); }
 function renderEarlier(){ $('#earlierGrid').innerHTML=earlier.map(e=>`<article class="earlier-card reveal"><h3>${e.title}</h3><span class="cost">${e.cost}</span><ul>${e.points.map(x=>`<li>${x}</li>`).join('')}</ul></article>`).join(''); }
-function renderDiffs(){ $('#diffGrid').innerHTML=differentiators.map(d=>`<article class="diff-card reveal"><div class="dicon">${d[0]}</div><h3>${d[1]}</h3><p>${d[2]}</p></article>`).join(''); }
+function renderDiffs(){ $('#diffGrid').innerHTML=differentiators.map(d=>`<article class="diff-card"><div class="dicon">${d[0]}</div><h3>${d[1]}</h3><p>${d[2]}</p></article>`).join(''); }
 function setupSearch(){
   const modal=$('#searchModal'), open=()=>{modal.classList.add('open');$('#globalSearch').focus();renderGlobalResults('');};
   $('#openSearch').onclick=open; $('#findExperience').onclick=open; $('#findSimilar').onclick=open; $('#closeSearch').onclick=()=>modal.classList.remove('open'); modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')}); $('#globalSearch').addEventListener('input',e=>renderGlobalResults(e.target.value));
@@ -83,15 +212,47 @@ function renderGlobalResults(q){
   const rows=engagements.filter(e=>!q||Object.values(e).join(' ').toLowerCase().includes(q)).slice(0,8);
   $('#globalResults').innerHTML=rows.map(e=>`<div class="result"><h4>${e.title}</h4><p>${e.desc}</p><small>${e.capability} • ${e.team} • ${e.geography}</small></div>`).join('') || '<div class="result"><h4>No match</h4><p>Try another capability, team, geography or methodology.</p></div>';
 }
-function setupNav(){
-  const links=$$('.nav a'); const sections=links.map(a=>$(a.getAttribute('href'))).filter(Boolean);
-  window.addEventListener('scroll',()=>{let idx=0;sections.forEach((s,i)=>{if(s.getBoundingClientRect().top<110)idx=i});links.forEach(a=>a.classList.remove('active')); if(links[idx])links[idx].classList.add('active');});
+function setupNav() {
+    const links = $$('.nav a');
+
+    const pairs = links
+        .map(a => ({
+            a,
+            s: $(a.getAttribute('href'))
+        }))
+        .filter(x => x.s);
+
+    function updateNav() {
+
+        const marker = window.innerHeight * 0.35;
+
+        let current = pairs[0];
+
+        for (const pair of pairs) {
+
+            const rect = pair.s.getBoundingClientRect();
+
+            if (rect.top <= marker && rect.bottom >= marker) {
+                current = pair;
+                break;
+            }
+        }
+
+        links.forEach(a => a.classList.remove('active'));
+
+        current.a.classList.add('active');
+    }
+
+    window.addEventListener('scroll', updateNav, { passive: true });
+
+    updateNav();
+
 }
 function setupCounters(){
   const io=new IntersectionObserver(entries=>entries.forEach(e=>{ if(e.isIntersecting){ const el=e.target,target=+el.dataset.count; let cur=0; const step=Math.max(1,Math.ceil(target/38)); const tick=()=>{cur=Math.min(target,cur+step);el.textContent=cur;if(cur<target)requestAnimationFrame(tick)}; tick(); io.unobserve(el);} }),{threshold:.5}); $$('[data-count]').forEach(el=>io.observe(el));
 }
 function setupReveal(){
-  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.08});
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.01,rootMargin:'0px 0px 120px 0px'});
   $$('.reveal:not(.show)').forEach(el=>io.observe(el));
 }
 init();
